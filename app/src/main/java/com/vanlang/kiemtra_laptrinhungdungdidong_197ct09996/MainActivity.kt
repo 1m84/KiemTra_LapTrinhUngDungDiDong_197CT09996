@@ -1,3 +1,5 @@
 package com.vanlang.kiemtra_laptrinhungdungdidong_197ct09996
 
-class MainActivity : LoginActivity()
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity()

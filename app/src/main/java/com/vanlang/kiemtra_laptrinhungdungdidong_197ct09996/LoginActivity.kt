@@ -1,5 +1,6 @@
 package com.vanlang.kiemtra_laptrinhungdungdidong_197ct09996
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Patterns
@@ -12,9 +13,8 @@ import androidx.core.graphics.toColorInt
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-open class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
-    // Khai báo biến (Tuyệt đối không dùng ViewBinding)
     private lateinit var etEmail: EditText
     private lateinit var etPassword: EditText
     private lateinit var btnLogin: Button
@@ -37,7 +37,6 @@ open class LoginActivity : AppCompatActivity() {
         btnLogin = findViewById(R.id.btnLogin)
         tvStatus = findViewById(R.id.tvStatus)
 
-        // Bắt sự kiện click Button Đăng nhập
         btnLogin.setOnClickListener {
             handleLogin()
         }
@@ -59,6 +58,12 @@ open class LoginActivity : AppCompatActivity() {
             showError("Mật khẩu phải có ít nhất 6 ký tự!")
         } else {
             showSuccess("Xác thực thành công!")
+
+            // Khởi tạo Intent tường minh chuyển sang ProfileActivity và truyền Email qua putExtra
+            val intent = Intent(this, ProfileActivity::class.java).apply {
+                putExtra("EXTRA_EMAIL", email)
+            }
+            startActivity(intent)
         }
     }
 
