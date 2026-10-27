@@ -1,5 +1,5 @@
 # BÀI THI THỰC HÀNH - CÂU 1
-- Họ và tên: Nguyen Hoan Minh Tan
+- Họ và tên: NGUYEN HOAN MINH TAN
 - MSSV: 197CT09996
 
 ## Minh chứng Câu 1
